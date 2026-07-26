@@ -20,29 +20,34 @@
 
         <!-- Шапка сайта -->
     <header id="header" class="header">
-        <div class="container header-container">
-            <!-- 1. Логотип -->
-            <a class="logo" href="./index.html"><span class="logo-span">Web</span>Studio</a>
+    <div class="container header-container">
+        <a class="logo" href="./index.html"><span class="logo-span">Web</span>Studio</a>
 
-            <!-- 2. Чистая навигация -->
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a class="nav-link current" href="#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                </ul>
-            </nav>
+        <!-- Навигация (на мобилках будет скрыта через CSS) -->
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link current" href="#features">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+            </ul>
+        </nav>
 
-            <!-- 3. Блок контактов -->
-            <address class="address">
-                <ul class="address-list">
-                    <li class="address-item"><a class="address-link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-                    <li class="address-item"><a class="address-link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
-                </ul>ыпр
-            </address>
-        </div>
-    </header>
+        <!-- Контакты (на мобилках будут скрыты через CSS) -->
+        <address class="address">
+            <ul class="address-list">
+                <li class="address-item"><a class="address-link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                <li class="address-item"><a class="address-link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+            </ul>
+        </address>
 
+        <!-- КНОПКА ОТКРЫТИЯ МОБИЛЬНОГО МЕНЮ (Гамбургер) -->
+        <button class="menu-open-btn" type="button" data-menu-open>
+            <svg class="menu-open-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-menu-hamburger"></use>
+            </svg>
+        </button>
+    </div>
+</header>
 
     <!-- Основной контент страницы -->
     <main>
@@ -395,7 +400,43 @@
                 </form>
             </div>
         </div>
-          </footer> <!-- Конец твоего подвала сайта -->
+          </footer> 
+          <!-- Конец твоего подвала сайта -->
+
+            <!-- ================= МОБИЛЬНОЕ МЕНЮ (СТРОГО ПО ТЗ #6) ================= -->
+    <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu-container">
+            <button class="menu-close-btn" type="button" data-menu-close>
+                <svg class="menu-close-icon" width="24" height="24">
+                    <use href="./images/icons.svg#close"></use>
+                </svg>
+            </button>
+
+            <nav class="mobile-nav">
+                <ul class="mobile-nav-list">
+                    <li class="mobile-nav-item"><a class="mobile-nav-link current" href="#features">Features</a></li>
+                    <li class="mobile-nav-item"><a class="mobile-nav-link" href="#team">Team</a></li>
+                    <li class="mobile-nav-item"><a class="mobile-nav-link" href="#portfolio">Portfolio</a></li>
+                </ul>
+            </nav>
+
+            <address class="mobile-address">
+                <ul class="mobile-address-list">
+                    <li class="mobile-address-item"><a class="mobile-address-link accent" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+                    <li class="mobile-address-item"><a class="mobile-address-link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                </ul>
+            </address>
+
+            <ul class="mobile-social-list">
+                <li class="mobile-social-item"><a class="mobile-social-link" href="" target="_blank" rel="noopener noreferrer"><svg class="mobile-social-icon" width="24" height="24"><use href="./images/icons.svg#instagram"></use></svg></a></li>
+                <li class="mobile-social-item"><a class="mobile-social-link" href="" target="_blank" rel="noopener noreferrer"><svg class="mobile-social-icon" width="24" height="24"><use href="./images/icons.svg#twitter"></use></svg></a></li>
+                <li class="mobile-social-item"><a class="mobile-social-link" href="" target="_blank" rel="noopener noreferrer"><svg class="mobile-social-icon" width="24" height="24"><use href="./images/icons.svg#facebook"></use></svg></a></li>
+                <li class="mobile-social-item"><a class="mobile-social-link" href="" target="_blank" rel="noopener noreferrer"><svg class="mobile-social-icon" width="24" height="24"><use href="./images/icons.svg#linkedin"></use></svg></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ================= МОДАЛЬНОЕ ОКНО (СТРОГО ПО ТЗ #7) ================= -->
 
     <div id="modal" class="backdrop" data-modal>
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
@@ -468,6 +509,7 @@
 
    </div>
 
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
 </body>
 </html>

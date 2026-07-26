@@ -5,4 +5,5 @@
 @import "./team.css";
 @import "./portfolio.css";
 @import "./footer.css";
+@import "./mobile-menu.css"; /* Добавили стили мобильного меню */
 @import "./modal.css";
