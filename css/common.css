@@ -13,27 +13,27 @@ body.modal-open {
 
 /* ================= ADAPTIVE CONTAINER (MOBILE FIRST) ================= */
 .container {
-  /* Базовое состояние для мобильных устройств (от 320px) */
-  max-width: 320px; /* Ограничивает ширину контента на маленьких экранах до 320px */
+  /* БАЗА (МОБИЛКА): 320px общая ширина - 32px паддингов = 288px контента */
+  max-width: 288px; 
   margin-left: auto;
   margin-right: auto;
-  padding-left: 16px; /* Внутренний отступ по ТЗ для мобилки */
+  padding-left: 16px; 
   padding-right: 16px;
 }
 
-/* Точка перелома для планшетов (от 768px) */
+/* ПЛАНШЕТ (TABLET): 768px общая ширина - 32px паддингов = 736px контента */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 768px; /* Ширина фиксируется на 768px */
-    /* Паддинги остаются 16px, как на мобилке, поэтому их не дублируем (Mobile First) */
+    max-width: 736px; 
+    /* Паддинги 16px автоматически наследуются от мобилки */
   }
 }
 
-/* Точка перелома для десктопов (от 1158px) */
+/* ДЕСКТОП (DESKTOP): 1158px общая ширина - 30px паддингов = 1128px контента */
 @media screen and (min-width: 1158px) {
   .container {
-    max-width: 1158px; /* Ширина фиксируется на 1158px */
-    padding-left: 15px; /* Переключаем паддинги на 15px строго по требованию ментора */
+    max-width: 1128px; 
+    padding-left: 15px; 
     padding-right: 15px;
   }
 }
