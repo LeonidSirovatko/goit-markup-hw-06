@@ -1,14 +1,12 @@
-/* ================= BACKDROP & MODAL CORE ================= */
+/* BACKDROP & MODAL CORE */
 .backdrop {
   position: fixed;
   inset: 0;
   z-index: 1000;
   background-color: rgba(46, 47, 66, 0.4);
-
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-
   transition: opacity var(--transition-dur-func),
     visibility var(--transition-dur-func);
 }
@@ -23,15 +21,15 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 408px;
-  min-height: 584px;
-  padding: 72px 24px 24px;
+  width: calc(100% - 32px);
+  max-width: 288px;
+  min-height: 623px;
+  padding: 72px 16px 24px;
   border-radius: 4px;
-  background: #fcfcfc;
+  background-color: #fcfcfc;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.14),
     0 1px 3px rgba(0, 0, 0, 0.12),
     0 2px 1px rgba(0, 0, 0, 0.2);
-
   transform: translate(-50%, -50%) scale(0.9);
   transition: transform var(--transition-dur-func);
 }
@@ -40,174 +38,13 @@
   transform: translate(-50%, -50%) scale(1);
 }
 
-.backdrop {
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-  background-color: rgba(46, 47, 66, 0.4);
-
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-
-  transition: opacity var(--transition-dur-func),
-    visibility var(--transition-dur-func);
-}
-
-.backdrop.is-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 408px;
-  min-height: 584px;
-  padding: 72px 24px 24px;
-  border-radius: 4px;
-  background: #fcfcfc;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.14),
-    0 1px 3px rgba(0, 0, 0, 0.12),
-    0 2px 1px rgba(0, 0, 0, 0.2);
-
-  transform: translate(-50%, -50%) scale(0.9);
-  transition: transform var(--transition-dur-func);
-}
-
-.backdrop.is-open .modal {
-  transform: translate(-50%, -50%) scale(1);
-}
-
-
-/* СТРОГО ДОБАВЛЯЕМ ЭТОТ КЛАСС: когда окно открыто, делаем его видимым */
-.backdrop {
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-  background-color: rgba(46, 47, 66, 0.4);
-
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-
-  transition: opacity var(--transition-dur-func),
-    visibility var(--transition-dur-func);
-}
-
-.backdrop.is-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 408px;
-  min-height: 584px;
-  padding: 72px 24px 24px;
-  border-radius: 4px;
-  background: #fcfcfc;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.14),
-    0 1px 3px rgba(0, 0, 0, 0.12),
-    0 2px 1px rgba(0, 0, 0, 0.2);
-
-  transform: translate(-50%, -50%) scale(0.9);
-  transition: transform var(--transition-dur-func);
-}
-
-.backdrop.is-open .modal {
-  transform: translate(-50%, -50%) scale(1);
-}
-
-
-.backdrop {
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-  background-color: rgba(46, 47, 66, 0.4);
-
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-
-  transition: opacity var(--transition-dur-func),
-    visibility var(--transition-dur-func);
-}
-
-.backdrop.is-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 408px;
-  min-height: 584px;
-  padding: 72px 24px 24px;
-  border-radius: 4px;
-  background: #fcfcfc;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.14),
-    0 1px 3px rgba(0, 0, 0, 0.12),
-    0 2px 1px rgba(0, 0, 0, 0.2);
-
-  transform: translate(-50%, -50%) scale(0.9);
-  transition: transform var(--transition-dur-func);
-}
-
-.backdrop.is-open .modal {
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.modal-close-btn {
-    position: absolute;
-    top: 24px;
-    right: 24px;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #e7e9fc;
-    /* ИСПРАВЛЕНО: цвет рамки изменен строго по требованию ментора */
-    border: 1px solid rgba(46, 47, 66, 0.4); 
-    padding: 0;
-    cursor: pointer;
-    transition: background-color var(--transition-dur-func), border var(--transition-dur-func);
-}
-
-.modal-close-btn:hover,
-.modal-close-btn:focus {
-    background-color: #404bbf;
-    border: none;
-}
-
-.modal-close-icon {
-    fill: #2e2f42;
-    transition: fill var(--transition-dur-func);
-}
-
-.modal-close-btn:hover .modal-close-icon,
-.modal-close-btn:focus .modal-close-icon {
-    fill: #ffffff;
-}
-
-.modal-title {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    text-align: center;
-    letter-spacing: 0.02em;
-    color: #2e2f42;
-    margin-bottom: 16px;
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+    max-width: none;
+    min-height: 584px;
+    padding: 72px 24px 24px;
+  }
 }
 
 /* ================= MODAL FORM ELEMENTS ================= */
@@ -371,7 +208,14 @@
     transition: background-color var(--transition-dur-func);
 }
 
-.modal-submit-btn:hover,
-.modal-submit-btn:focus {
-    background-color: #404bbf;
+.modal-close-btn {
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  transition: background-color var(--transition-dur-func),
+    border-color var(--transition-dur-func);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: #404bbf;
+  border-color: #404bbf;
 }

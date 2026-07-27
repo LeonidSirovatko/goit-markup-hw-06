@@ -1,152 +1,213 @@
 .footer {
-    background-color: #2e2f42;
-    padding-top: 100px;
-    padding-bottom: 100px;
+  padding: 96px 0;
+  background-color: #2e2f42;
 }
 
 .footer-container {
-    display: flex;
-    align-items: baseline;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
 }
 
-.footer-info-block {
-    /* Отступ между блоками маржином по требованию ТЗ */
-    margin-right: 120px; 
+.footer-info-block,
+.footer-social-block,
+.footer-subscribe-block {
+  width: 100%;
 }
 
 .footer-logo {
-    display: inline-block;
-    margin-bottom: 16px;
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: #4d5ae5;
+  display: block;
+  margin-bottom: 16px;
+  color: #4d5ae5;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .logo-span-footer {
-    color: #f4f4fd;
+  color: #f4f4fd;
 }
 
 .footer-text {
-    max-width: 264px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #f4f4fd;
+  max-width: 264px;
+  margin: 0 auto;
+  color: #f4f4fd;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
-.footer-social-title {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #ffffff;
-    margin-bottom: 16px;
+.footer-social-title,
+.footer-subscribe-title {
+  margin-bottom: 16px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
 }
 
 .footer-social-list {
-    display: flex;
-    gap: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
 }
 
 .footer-social-item {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
 
 .footer-social-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    background-color: #4d5ae5;
-    border-radius: 50%;
-    transition: background-color var(--transition-dur-func);
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  transition: background-color var(--transition-dur-func);
 }
 
-/* Зеленый ховер для иконок в футере по макету */
 .footer-social-link:hover,
 .footer-social-link:focus {
-    background-color: #31d0aa;
+  background-color: #31d0aa;
 }
 
 .footer-social-icon {
-    fill: #f4f4fd;
-}
-/* ================= FOOTER SUBSCRIBE FORM ================= */
-.footer-subscribe-block {
-    /* Исправлено по ТЗ: вместо 80px ставим авто-выравнивание в крайний правый угол */
-    margin-left: auto;
-}
-
-.footer-subscribe-title {
-    margin-bottom: 16px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #ffffff;
+  fill: #f4f4fd;
 }
 
 .footer-subscribe-form {
-    display: flex;
-    gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .footer-subscribe-input {
-    width: 264px;
-    height: 40px;
-    border: 1px solid #ffffff;
-    background-color: transparent;
-    font-size: 12px;
-    line-height: 1.17; /* ИСПРАВЛЕНО: строго 1.17 по требованию ментора */
-    letter-spacing: 0.04em;
-    padding-left: 16px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-    color: #ffffff;
-    transition: border-color var(--transition-dur-func);
-}
-
-.footer-subscribe-input:focus {
-    outline: none;
-    border-color: #31d0aa; /* ИСПРАВЛЕНО: строго зеленый цвет по требованию ментора */
+  width: 100%;
+  height: 40px;
+  padding-left: 16px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #ffffff;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.15));
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
 }
 
 .footer-subscribe-input::placeholder {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .footer-subscribe-btn {
-    min-width: 165px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    color: #ffffff;
-    cursor: pointer;
-    background-color: #4d5ae5;
-    border: none;
-    border-radius: 4px;
-    transition: background-color var(--transition-dur-func);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  min-width: 165px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4d5ae5;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  transition: background-color var(--transition-dur-func);
 }
 
 .footer-subscribe-btn:hover,
 .footer-subscribe-btn:focus {
-    background-color: #31d0aa; /* ИСПРАВЛЕНО: строго зеленый цвет по требованию ментора */
+  background-color: #31d0aa;
 }
 
 .footer-subscribe-icon {
-    margin-left: 16px;
-    fill: #ffffff;
+  margin-left: 16px;
+  fill: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-container {
+    max-width: 584px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    column-gap: 24px;
+    row-gap: 72px;
+    padding: 0;
+  }
+
+  .footer-info-block {
+    width: 264px;
+  }
+
+  .footer-social-block {
+    width: auto;
+  }
+
+  .footer-subscribe-block {
+    width: 100%;
+  }
+
+  .footer-logo,
+  .footer-social-title,
+  .footer-subscribe-title {
+    text-align: left;
+  }
+
+  .footer-text {
+    margin: 0;
+  }
+
+  .footer-social-list {
+    justify-content: flex-start;
+  }
+
+  .footer-subscribe-form {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .footer-subscribe-input {
+    width: 264px;
+  }
+
+  .footer-subscribe-btn {
+    align-self: auto;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .footer {
+    padding: 100px 0;
+  }
+
+  .footer-container {
+    max-width: 1158px;
+    flex-wrap: nowrap;
+    gap: 0;
+    padding: 0 15px;
+  }
+
+  .footer-info-block {
+    margin-right: 120px;
+  }
+
+  .footer-subscribe-block {
+    width: auto;
+    margin-left: auto;
+  }
 }

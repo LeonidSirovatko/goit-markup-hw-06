@@ -13,28 +13,22 @@ body.modal-open {
 
 /* ================= ADAPTIVE CONTAINER (MOBILE FIRST) ================= */
 .container {
-  /* БАЗА (МОБИЛКА): 320px общая ширина - 32px паддингов = 288px контента */
-  max-width: 288px; 
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 16px; 
-  padding-right: 16px;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
-/* ПЛАНШЕТ (TABLET): 768px общая ширина - 32px паддингов = 736px контента */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 736px; 
-    /* Паддинги 16px автоматически наследуются от мобилки */
+    max-width: 768px;
+    padding: 0 16px;
   }
 }
 
-/* ДЕСКТОП (DESKTOP): 1158px общая ширина - 30px паддингов = 1128px контента */
 @media screen and (min-width: 1158px) {
   .container {
-    max-width: 1128px; 
-    padding-left: 15px; 
-    padding-right: 15px;
+    max-width: 1158px;
+    padding: 0 15px;
   }
 }
 
@@ -47,8 +41,13 @@ body {
 }
 
 .section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+  padding: 96px 0;
+}
+
+@media screen and (min-width: 1158px) {
+  .section {
+    padding: 120px 0;
+  }
 }
 
 h1, h2, h3, h4, h5, h6, p, ul {
