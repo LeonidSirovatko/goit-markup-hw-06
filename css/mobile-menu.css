@@ -1,85 +1,14 @@
-/* ================= MOBILE MENU CORE ================= */
-.mobile-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #ffffff;
-    z-index: 999;
-    
-    /* Скрыто по умолчанию */
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Показываем при добавлении класса is-open */
-.mobile-menu.is-open {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-}
-
-.mobile-menu-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 72px 24px 40px 16px;
-}
-
-.menu-close-btn {
-    position: absolute;
-    top: 24px;
-    right: 24px;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #e7e9fc;
-    border: 1px solid rgba(46, 47, 66, 0.4);
-    padding: 0;
-    cursor: pointer;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.menu-close-btn:hover,
-.menu-close-btn:focus {
-    background-color: #404bbf;
-    border-color: #404bbf;
-}
-
-.menu-close-icon {
-    fill: #2e2f42;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.menu-close-btn:hover .menu-close-icon,
-.menu-close-btn:focus .menu-close-icon {
-    fill: #ffffff;
-}
-
-/* Скрываем мобильное меню на десктопах и планшетах */
-@media screen and (min-width: 768px) {
-    .mobile-menu {
-        display: none;
-    }
-}
-.mobile-menu-nav {
+.mobile-nav {
   margin-bottom: auto;
 }
 
-.mobile-menu-list {
+.mobile-nav-list {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 
-.mobile-menu-link {
+.mobile-nav-link {
   color: #2e2f42;
   font-size: 36px;
   font-weight: 700;
@@ -87,51 +16,47 @@
   letter-spacing: 0.02em;
 }
 
-.mobile-menu-link.current {
+.mobile-nav-link.current {
   color: #404bbf;
 }
 
-.mobile-menu-address {
-  margin-top: auto;
+.mobile-address {
   margin-bottom: 48px;
   font-style: normal;
 }
 
-.mobile-menu-address-list {
+.mobile-address-list {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.mobile-menu-address-link {
+.mobile-address-link {
   display: block;
+  color: #434455;
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
 }
 
-.mobile-menu-address-tel {
+.mobile-address-link.accent {
   color: #4d5ae5;
   font-size: 36px;
   line-height: 1.11;
 }
 
-.mobile-menu-address-email {
-  color: #434455;
-}
-
-.mobile-menu-social-list {
+.mobile-social-list {
   display: flex;
   gap: 40px;
 }
 
-.mobile-menu-social-item {
+.mobile-social-item {
   width: 40px;
   height: 40px;
 }
 
-.mobile-menu-social-link {
+.mobile-social-link {
   display: flex;
   width: 100%;
   height: 100%;
@@ -141,6 +66,6 @@
   background-color: #4d5ae5;
 }
 
-.mobile-menu-social-icon {
+.mobile-social-icon {
   fill: #f4f4fd;
 }
